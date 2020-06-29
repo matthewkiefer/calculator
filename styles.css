@@ -2,25 +2,35 @@
 
 #main-grid {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 5px;
     grid-template-columns: repeat(3, 100px);
-    color: white;
+    color: rgb(97, 97, 97);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
     text-align: center;
 }
 
+
+.display {
+    grid-area: 1 / 1 / span 1 / span 3;
+    border: 3px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    padding: 20px;
+}
+
 .buttons {
-    border-radius: 25px;
-    background: green;
+    border-radius: 5px;
+    background: rgb(202, 202, 202);
     padding: 30px;
-    box-shadow: 2px 4px black;
+  /*  box-shadow: 2px 4px black; */
+  box-shadow: -20px -10px 20px rgb(190, 190, 190)  inset;
 
 }
 
 .buttons:hover {
-    box-shadow: -10px -10px 20px white inset;
-    translate: 2px 4px;
+    box-shadow: 0px 0px 5px rgb(180, 180, 180);
+
+    /*    translate: 2px 4px;*/
 }
 
 .buttons:click {
@@ -28,10 +38,4 @@
     translate: 5px 10px;
 }
 
-.display {
-    grid-area: 1 / 1 / span 1 / span 3;
-    border: 2px solid green;
-    border-radius: 25px;
-    padding: 20px;
-}
 
