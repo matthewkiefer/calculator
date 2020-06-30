@@ -1,42 +1,107 @@
 /* To style: font, hover, animation for clicking buttons, calculator outline */
 /*add variables for colors reused*/
+/*bug: click and hold then move mouse*/
 
 #main-grid {
-    display: grid;
+    display: inline-grid;
     grid-gap: 5px;
     grid-template-columns: repeat(4, 100px);
     color: rgb(31, 31, 31);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 36px;
+    font-size: 40px;
     text-align: center;
+    padding: 10px;
+    border: 3px solid rgb(65, 151, 115);
+    border-radius: 5px;
+}
+
+#plus {
+    grid-area: 2 / 4;
+}
+#minus {
+    grid-area: 3 / 4;
+}
+#times {
+    grid-area: 4 / 4;
+}
+#divided-by {
+    grid-area: 5 / 4;
+}
+/*
+#backspace {
+    grid-area: 2 / 3 / span 1/ span 2;
+}
+#clear {
+    grid-area: 2 / 1 / span 1/ span 2;
+}*/
+
+.clear-back {
+    grid-area: 2 / 1 / span 1 / span 3;
+}
+#dot {
+    grid-area: 6 / 4 / span 1/ span 1;
+}
+#enter {
+    grid-area: 7 / 1 / span 1/ span 4;
+}
+#zero  {
+    grid-area: 6 / 2;
 }
 
 
 .display {
+    box-sizing: border-box;
+    display: grid;
     grid-area: 1 / 1 / span 1 / span 4;
     border: 3px solid rgb(202, 202, 202);
     border-radius: 5px; 
     background-color: rgb(246, 246, 246);
     color: rgb(65, 151, 115); /*old color scheme*/
     color: rgb(31, 31, 31);
-    padding: 20px;
+    height: 100px;
+}
+
+#display-numbers {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: right;
+    padding-right: 5px;
 }
 
 .buttons {
+    display: grid;
     border-radius: 5px;
     background: rgb(202, 202, 202);
     padding: 30px;
     font-size: 30px;
     box-shadow: -20px -10px 20px rgb(190, 190, 190)  inset;
+    
+}
+
+.clear-back {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .buttons:hover {
     box-shadow: 0px 0px 5px rgb(180, 180, 180);
+ /*   background-color: rgb(204, 255, 233) */
+     background-color: rgb(65, 151, 115);
+     color: rgb(243, 243, 243);
 }
 
 .buttons:active {
     background-color: rgb(65, 151, 115);
+    background-color: rgb(204, 255, 233);
     color: rgb(243, 243, 243);
+    color: rgb(31, 31, 31);
 }
 
+.glowing {
+    box-shadow: 0 0 5px rgb(65, 151, 115);
+}
 
+.inactive {
+    opacity: 40%;
+}
